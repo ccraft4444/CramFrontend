@@ -1,0 +1,226 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("./DMSans-Regular.ttf") format("truetype");
+}
+
+.primaryContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.uploadForm {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.uploadForm a {
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+.uploadForm a:first-child {
+  margin-right: 20px;
+  /* text-decoration: underline; */
+}
+
+.uploadForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  justify-content: center;
+}
+
+.uploadForm form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+
+  margin-bottom: 20px;
+
+  transition: all 0.3s ease-in-out;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 500px;
+
+  height: 550px;
+  margin-bottom: 30px;
+
+  background: #e9e9e9;
+  border: 1px solid #d7d7d7;
+  box-shadow: 0px 58px 23px rgba(25, 25, 26, 0.01),
+    0px 33px 20px rgba(25, 25, 26, 0.05), 0px 15px 15px rgba(25, 25, 26, 0.09),
+    0px 4px 8px rgba(25, 25, 26, 0.1), 0px 0px 0px rgba(25, 25, 26, 0.1);
+  border-radius: 30px;
+}
+
+.upload-container {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+
+  margin-bottom: 20px;
+
+  transition: all 0.3s ease-in-out;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 500px;
+
+  height: 550px;
+  margin-bottom: 30px;
+
+  background: #e9e9e9;
+  border: 1px solid #d7d7d7;
+  box-shadow: 0px 58px 23px rgba(25, 25, 26, 0.01),
+    0px 33px 20px rgba(25, 25, 26, 0.05), 0px 15px 15px rgba(25, 25, 26, 0.09),
+    0px 4px 8px rgba(25, 25, 26, 0.1), 0px 0px 0px rgba(25, 25, 26, 0.1);
+  border-radius: 30px;
+}
+
+.uploadForm form input[type="file"]:focus {
+  border-color: #7855ff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.uploadForm form button[type="submit"] {
+  background-color: #7855ff;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  /* identical to box height */
+
+  box-shadow: 0px 58px 23px rgba(25, 25, 26, 0.01),
+    0px 33px 20px rgba(25, 25, 26, 0.05), 0px 15px 15px rgba(25, 25, 26, 0.09),
+    0px 4px 8px rgba(25, 25, 26, 0.1), 0px 0px 0px rgba(25, 25, 26, 0.1);
+
+  text-align: center;
+}
+
+.uploadForm form button[type="submit"]:hover {
+  background-color: #7855ff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text10 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+
+  color: #777777;
+}
+
+.cont-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cont-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.inp {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.primaryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.uploadForm {
+  width: 50%;
+  /* ...other styles */
+}
+
+.upload-container {
+  width: 70%;
+  /* ...other styles */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30%;
+  margin-bottom: 500px;
+  /* ...other styles */
+}
+
+.tx {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #777777;
+}
+
+.txx {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  color: #777777;
+}

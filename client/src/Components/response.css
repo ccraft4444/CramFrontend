@@ -1,0 +1,119 @@
+.contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 60%;
+  margin: 0 auto;
+
+  box-shadow: 0px 58px 23px rgba(25, 25, 26, 0.01),
+    0px 33px 20px rgba(25, 25, 26, 0.05), 0px 15px 15px rgba(25, 25, 26, 0.09),
+    0px 4px 8px rgba(25, 25, 26, 0.1), 0px 0px 0px rgba(25, 25, 26, 0.1);
+  border-radius: 30px;
+}
+
+.textington {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.text3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+  width: 600px;
+  color: #777777;
+}
+
+.quiz {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+}
+
+li {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+
+  color: #777777;
+}
+
+hr {
+  margin: 10px;
+}
+
+.butt {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  background-color: #7855ff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 504px;
+  height: 81px;
+  left: 100px;
+  top: 535px;
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  /* identical to box height */
+
+  text-align: center;
+
+  box-shadow: 0px 58px 23px rgba(25, 25, 26, 0.01),
+    0px 33px 20px rgba(25, 25, 26, 0.05), 0px 15px 15px rgba(25, 25, 26, 0.09),
+    0px 4px 8px rgba(25, 25, 26, 0.1), 0px 0px 0px rgba(25, 25, 26, 0.1);
+}
+
+h4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+}
+
+.return {
+  width: 600px;
+  border-radius: 15px;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* ::-webkit-scrollbar {
+    display: none;
+  } */
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  padding: 17px;
+  margin-top: 17px;
+  margin-bottom: 17px;
+
+  box-shadow: 0px 58px 23px rgba(25, 25, 26, 0.01),
+    0px 33px 20px rgba(25, 25, 26, 0.05), 0px 15px 15px rgba(25, 25, 26, 0.09),
+    0px 4px 8px rgba(25, 25, 26, 0.1), 0px 0px 0px rgba(25, 25, 26, 0.1);
+}
