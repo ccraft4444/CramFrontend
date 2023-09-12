@@ -11,7 +11,7 @@ export const auth = {
   loginUser: thunk(async (actions, payload) => {
     console.log("payload in login", payload);
     const { data } = await axios.post(
-      `${process.env.VITE_DB_URL}/routes/users/login`,
+      `${import.meta.env.VITE_DB_URL}/routes/users/login`,
       payload
     );
     console.log("data after line 11", data);
@@ -21,7 +21,7 @@ export const auth = {
   createUser: thunk(async (actions, payload) => {
     console.log("payload", payload);
     const { data } = await axios.post(
-      `${process.env.VITE_DB_URL}/routes/users/register`,
+      `${import.meta.env.VITE_DB_URL}/routes/users/register`,
       payload
     );
     console.log("data in reg", data);
@@ -30,28 +30,31 @@ export const auth = {
 
   logoutUser: thunk(async (actions, payload) => {
     const { data } = await axios.post(
-      `${process.env.VITE_DB_URL}/routes/users/logout`,
+      `${import.meta.env.VITE_DB_URL}/routes/users/logout`,
       payload
     );
     actions.setUser({ username: "Guest" });
   }),
   fetchMe: thunk(async (actions, payload) => {
     const { data } = await axios.get(
-      `${process.env.VITE_DB_URL}/routes/users/me`,
+      `${import.meta.env.VITE_DB_URL}/routes/users/me`,
       payload
     );
     actions.setUser(data);
   }),
   updateCredits: thunk(async (actions, payload) => {
-    await axios.patch(`${process.env.VITE_DB_URL}/routes/users/me/credits`, {
-      credits: payload.credits,
-    });
+    await axios.patch(
+      `${import.meta.env.VITE_DB_URL}/routes/users/me/credits`,
+      {
+        credits: payload.credits,
+      }
+    );
     const { data } = await axios.get(`${env("DB")}/routes/users/me`, payload);
     actions.setUser(data);
     return payload.credits; // return the new credit value
   }),
   updateUser: thunk(async (actions, payload) => {
-    await axios.patch(`${process.env.VITE_DB_URL}/routes/users/me`, {
+    await axios.patch(`${import.meta.env.VITE_DB_URL}/routes/users/me`, {
       email: payload.email,
       password: payload.password,
     });
