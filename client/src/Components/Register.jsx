@@ -28,6 +28,7 @@ export default function Register() {
             try {
               if (password == password1) {
                 await createUser({ email, password });
+                navigate("/fileUpload");
               } else {
                 setError("Passwords must match");
               }

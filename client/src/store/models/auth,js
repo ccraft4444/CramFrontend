@@ -11,7 +11,7 @@ export const auth = {
   loginUser: thunk(async (actions, payload) => {
     console.log("payload in login", payload);
     const { data } = await axios.post(
-      `${env("DB")}/routes/users/login`,
+      `${process.env.DB_URL}/routes/users/login`,
       payload
     );
     console.log("data after line 11", data);
@@ -21,25 +21,29 @@ export const auth = {
   createUser: thunk(async (actions, payload) => {
     console.log("payload", payload);
     const { data } = await axios.post(
-      `${env("DB")}/routes/users/register`,
+      `${process.env.DB_URL}/routes/users/register`,
       payload
     );
+    console.log("data in reg", data);
     actions.setUser(data);
   }),
 
   logoutUser: thunk(async (actions, payload) => {
     const { data } = await axios.post(
-      `${env("DB")}/routes/users/logout`,
+      `${process.env.DB_URL}/routes/users/logout`,
       payload
     );
     actions.setUser({ username: "Guest" });
   }),
   fetchMe: thunk(async (actions, payload) => {
-    const { data } = await axios.get(`${env("DB")}/routes/users/me`, payload);
+    const { data } = await axios.get(
+      `${process.env.DB_URL}/routes/users/me`,
+      payload
+    );
     actions.setUser(data);
   }),
   updateCredits: thunk(async (actions, payload) => {
-    await axios.patch(`${env("DB")}/routes/users/me/credits`, {
+    await axios.patch(`${process.env.DB_URL}/routes/users/me/credits`, {
       credits: payload.credits,
     });
     const { data } = await axios.get(`${env("DB")}/routes/users/me`, payload);
@@ -47,7 +51,7 @@ export const auth = {
     return payload.credits; // return the new credit value
   }),
   updateUser: thunk(async (actions, payload) => {
-    await axios.patch(`${env("DB")}/routes/users/me`, {
+    await axios.patch(`${process.env.DB_URL}/routes/users/me`, {
       email: payload.email,
       password: payload.password,
     });
