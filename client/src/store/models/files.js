@@ -7,13 +7,15 @@ export const files = {
     state.data = payload;
   }),
   fetchFiles: thunk(async (actions, payload) => {
-    const { data } = await axios.get(`${process.env.DB_URL}/routes/documents`);
+    const { data } = await axios.get(
+      `${process.env.VITE_DB_URL}/routes/documents`
+    );
     actions.setFIle(data);
   }),
   fetchFile: action(async (state, fileId) => {
     try {
       const response = await fetch(
-        `${process.env.DB_URL}/routes/documents/${fileId}`
+        `${process.env.VITE_DB_URL}/routes/documents/${fileId}`
       );
       const blob = await response.blob();
       return blob;
@@ -25,7 +27,7 @@ export const files = {
   createFile: thunk(async (actions, payload) => {
     console.log("create file payload", payload);
     const { data } = await axios.post(
-      `${process.env.DB_URL}/routes/documents`,
+      `${process.env.VITE_DB_URL}/routes/documents`,
       payload
     );
     actions.setFile(data);
