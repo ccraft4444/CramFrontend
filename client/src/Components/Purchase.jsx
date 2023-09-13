@@ -13,7 +13,6 @@ export default function Purchase() {
   const [selectedTier, setSelectedTier] = useState(null);
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
-  
 
   useEffect(() => {
     // Check to see if this is a redirect back from Checkout
@@ -50,7 +49,7 @@ export default function Purchase() {
   const onCheckout = async (tier) => {
     // Create a new checkout session
     const response = await axios.post(
-      "/routes/payments/create-checkout-session",
+      `${import.meta.env.VITE_DB_URL}/routes/payments/create-checkout-session`,
       {
         priceId: tier.priceId,
         tierIndex: selectedTier, // pass the selected tier index to the server
