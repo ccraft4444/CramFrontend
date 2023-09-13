@@ -52,7 +52,7 @@ export default function FileUploader({ onStudyGuideChange, onRouteChange }) {
       formData.append(`pdfFile${index}`, file);
     });
 
-    fetch("/routes/documents/extract-text", {
+    fetch(`${import.meta.env.VITE_DB_URL}/routes/documents/extract-text`, {
       method: "POST",
       body: formData,
     })
