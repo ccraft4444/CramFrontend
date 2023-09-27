@@ -22,7 +22,7 @@ export default function Login() {
             e.preventDefault();
             try {
               await loginUser({ email, password });
-              navigate("/fileUpload");
+              navigate("/success");
             } catch (error) {
               setError("Invalid Credentials");
               setEmail("");

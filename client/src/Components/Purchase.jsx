@@ -52,7 +52,7 @@ export default function Purchase() {
       `${import.meta.env.VITE_DB_URL}/routes/payments/create-checkout-session`,
       {
         priceId: tier.priceId,
-        tierIndex: selectedTier, // pass the selected tier index to the server
+        tierIndex: selectedTier,
         userId: selectedUser.id,
       }
     );
