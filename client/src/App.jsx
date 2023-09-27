@@ -80,7 +80,6 @@ function App() {
           }
         />
         <Route path="/purchase" element={<Purchase />} />
-        <Route path="/upload" element={<Upload />} />
         <Route path="/home" element={<Home />} />
         <Route
           path="/fileUpload"
